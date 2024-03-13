@@ -1,0 +1,257 @@
+@primary-color: #3DB87B;
+@secondary-color: #4CE398;
+@text-color: #737373;
+@white: #ffffff;
+@green-bg: #34B575;
+@dark-green: #1C8253;
+
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transition {
+    transition: all 0.15s linear 0s;
+}
+
+
+.logo {
+    display: block;
+    border-radius: 100%;
+    content: "";
+    height: 100px;
+    left: 50px;
+    position: fixed;
+    top: 18px;
+    width: 100px;
+    z-index: 9998;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.nav_links, .nav_buttons {
+    display: flex;
+    align-items: center;
+
+    li {
+        float: none;
+        display: inline-block;
+        text-align: center;
+
+        a {
+            font-family: sans-serif;
+            text-decoration: none;
+            color: @primary-color;
+            padding: 20px;
+            font-weight: 600;
+            border-bottom: 3px solid transparent;
+        }
+    }
+}
+
+.navbar {
+    background-color: @white;
+    box-shadow: 0 1px 5px;
+    left: 0;
+    min-height: 68px;
+    padding-right: 2em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    clear: both;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn a {
+    background-color: @secondary-color;
+    border-radius: 7px;
+    color: @white !important;
+    font-size: 0.9em;
+    margin-left: 15px;
+    padding: 0.6em 1em !important;
+    width: 120px;
+    text-align: right !important;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    &-content {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: sans-serif;
+        text-align: center;
+        border-radius: 7px;
+        position: absolute;
+        background-color: @secondary-color;
+        min-width: 100px;
+        padding: 12px 9.5px;
+        z-index: 1;
+        left: 15px;
+        top: 20px;
+        opacity: 0;
+        transform: scale(0);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+        a {
+            text-decoration: none;
+            color: @white;
+            .transition;
+
+            &:hover {
+                text-decoration: underline;
+                color: @primary-color;
+            }
+        }
+    }
+
+    &:hover .dropdown-content {
+        display: block;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.offer img {
+    width: 100%;
+}
+
+section {
+    margin: 15px;
+}
+
+.firstblck {
+    display: flex;
+}
+
+.more {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    width: 90%;
+    color: @text-color;
+}
+
+.span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    color: @text-color;
+    font-weight: 600;
+}
+
+.maintxt {
+    width: 80%;
+}
+
+.donate {
+    padding-bottom: 100px;
+    font-family: sans-serif;
+    font-size: 64px;
+    color: @primary-color;
+}
+
+.secondblck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    padding: 15px;
+
+    img {
+        height: 35px;
+        width: auto;
+    }
+}
+
+.txtblocks {
+    width: 690px;
+    display: flex;
+
+    h5 {
+        font-family: sans-serif;
+        font-weight: 600;
+        color: @primary-color;
+        margin: 22px 0 2px;
+    }
+
+    p {
+        line-height: 25px;
+        font-family: sans-serif;
+        margin: 2px 0 16px;
+    }
+}
+
+.contacts {
+    gap: 150px;
+    font-family: 'Open Sans', sans-serif;
+    color: @white;
+    background-color: @green-bg;
+    display: flex;
+    justify-content: center;
+}
+
+.facts {
+    .flex-center();
+    flex-direction: column;
+    text-align: center;
+}
+
+.conn {
+    .flex-center();
+    flex-direction: column;
+    text-align: center;
+
+    &-links {
+        li {
+            a {
+                font-size: 30px;
+                color: @green-bg;
+            }
+
+            margin: 3px;
+            padding: 10px 0 0;
+            width: 50px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: @dark-green;
+            display: inline-block;
+            .transition;
+
+            &:hover {
+                background-color: @white;
+            }
+        }
+    }
+}
+
+.header_txt {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h5.header_txt {
+    margin: 0;
+}
+
+.line {
+    background-color: @white;
+    height: 200px;
+    width: 2px;
+    margin-top: 25px;
+}
+
+.line_green {
+    background-color: @dark-green;
+    border-radius: 10px;
+    width: 80px;
+    height: 4px;
+    margin-bottom: 20px;
+}
