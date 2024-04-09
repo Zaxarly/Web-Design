@@ -242,3 +242,185 @@ h5.header_txt{
     height: 4px;
     margin-bottom: 20px;
 }
+
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle-label {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    background: #3DB87B;
+    height: 3px;
+    width: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+}
+
+.hamburger::before {
+    transform: translateY(-10px);
+}
+
+.hamburger::after {
+    transform: translateY(10px);
+}
+
+
+/* Стилі для мобільних пристроїв */
+@media (max-width: 1096px) {
+    /* Меню навігації */
+
+    .menu-toggle-label {
+        display: block;
+    }
+
+    .nav_links,
+    .nav_buttons {
+        display: none;
+    }
+
+    .menu-toggle:checked ~ .nav_links,
+    .menu-toggle:checked ~ .nav_buttons {
+        display: flex;
+        padding: 20px 20px;
+        align-items: baseline;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      min-height: 40px;
+    }
+
+    .logo {
+        display: flex;
+        top: 5px;
+        width: -webkit-fill-available;
+        justify-content: flex-end;
+        z-index: 9998;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+  
+    .nav_links li,
+    .nav_buttons li {
+      display: block;
+      width: max-content;
+      text-align: left;
+    }
+  
+    /* Випадаюче меню */
+    .dropdown-content {
+      opacity: 1;
+      background-color: white;
+      padding: 10px 9.5px;
+    }
+  
+    .dropdown-content a {
+      color: #3DB87B;
+    }
+  
+    /* Головний банер */
+    .offer img {
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .donate{
+        padding-bottom: 0px;
+        font-size: 50px;
+    }
+  
+    /* Блоки з текстом і іконками */
+    .firstblck {
+      flex-direction: column;
+    }
+  
+    .maintxt {
+      width: 100%;
+      text-align: center;
+    }
+
+    .more{
+        width: 100%;
+    }
+  
+    .image {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .image img{
+        width: 200px;
+        height: 500px;
+    }
+
+    .txtblocks {
+      align-items: center;
+      width: auto;
+    }
+  
+    /* Футер */
+    .contacts {
+      flex-direction: column;
+      gap: 30px;
+      padding: 20px;
+    }
+  
+    .line {
+      height: 2px;
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .navbar{
+        min-height: 10px;
+    }
+
+    .logo{
+        top: 0;
+        display: flex;
+        width: -webkit-fill-available;
+        justify-content: flex-end;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .menu-toggle:checked ~ .nav_links,
+    .menu-toggle:checked ~ .nav_buttons {
+        padding: 20px 40px 10px 20px;
+        line-height: 20px;
+    }
+
+    .search{
+        display: block;
+    }
+
+    .btndonate{
+        margin-left: 20px;
+    }
+
+  }

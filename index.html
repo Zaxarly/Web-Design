@@ -7,9 +7,9 @@
     <link rel="icon" href="img/sloth_face.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    <!-- <link rel="stylesheet/less" type="text/css" href="css/style.less" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
@@ -18,6 +18,10 @@
     <header class="header">
         <div class="logo"><img src="img/logo.png" alt="logo"></div>
 <nav class="navbar">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-toggle-label">
+        <span class="hamburger"></span>
+    </label>
     <ul class="nav_links">
         <li><a href="">Home</a></li>
         <li><a href="">About</a></li>
@@ -27,15 +31,15 @@
     </ul>
     <ul class="nav_buttons">
         <div class="dropdown">
-            <li class="btn"><a href="">How to help?</a></li>
+            <li class="btn"><a href="#">How to help?</a></li>
             <div class="dropdown-content">
                 <a href="#">Adopt sloth</a> <br>
                 <a href="#">Save an Acre</a> <br>
                 <a href="#">Plant a tree</a>
               </div>
         </div>
-        <li class="btn"><a href="">Donate</a></li>
-        <li><a href=""><i class="fa fa-search fa-lg"></i></a></li>
+        <li class="btn btndonate"><a href="">Donate</a></li>
+        <li><a class="search" href=""><i class="fa fa-search fa-lg"></i></a></li>
     </ul>
 </nav>
         <div class="offer">
