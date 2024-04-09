@@ -330,12 +330,12 @@ h5.header_txt{
     /* Випадаюче меню */
     .dropdown-content {
       opacity: 1;
-      background-color: white;
+      background-color: #4CE398;
       padding: 10px 9.5px;
     }
   
     .dropdown-content a {
-      color: #3DB87B;
+      color: #ffffff;
     }
   
     /* Головний банер */
